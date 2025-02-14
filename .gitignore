@@ -1,0 +1,21 @@
+# Ignore Rust target directory
+target/
+
+# Ignore Cargo lock file for libraries (but keep it for binaries)
+Cargo.lock
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore debug and incremental compilation files
+debug/
+incremental/
+
+# Ignore executables
+*.exe
+*.out
+*.dSYM
+
