@@ -1,0 +1,46 @@
+What is Rust : ? 
+
+
+
+Rust is a compiled languaged , uses a compiler to translate the code into machine code ; comparable to C++
+
+Rust was started as a side project ?? 
+
+As fast as you can get to C without being C?
+
+Why is it prefered from C/C++?
+
+
+Rust tries to find the balance : 
+
+1) Speed - Comparable to C/C++
+2) Safety - C/C++ are unsafe in memory management, Rust tries to be
+3) Concurrency - Multithreads can run in paralel, 
+4) Portability - Compile once and run everywhere? Gets compiled into an exe, and then can work everywhere
+
+
+Rust does not have Garbage Collection , it uses ownership and borrowing
+
+Package Manager - > CARGO 
+
+-----------------------------
+
+Chapter 1 : 
+
+Function definition :
+
+A function is defined with fn() <function name> {
+
+<function_body>;
+}
+
+after every changes to a .rs file , we would need to recompile with rustc then ./<file_name>
+
+
+
+however we can create a project using CARGO , which is more efficient 
+
+cargo new <ProjectName>
+cd into ProjectName
+perform changes on .rs file
+cargo run ! 

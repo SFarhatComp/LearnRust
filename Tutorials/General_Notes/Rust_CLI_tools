@@ -1,0 +1,134 @@
+" ============================================================
+" Useful CLI Tools Built in Rust
+" ============================================================
+
+" ===============================
+" 1. What Are Rust CLI Tools?
+" ===============================
+" - Many CLI tools written in Rust are **faster, safer, and more feature-rich** 
+"   than their traditional Unix equivalents.
+" - They can be installed via:
+"   - Cargo (`cargo install <tool>`)
+"   - Package managers (`apt`, `dnf`, `brew`)
+
+" ===============================
+" 2. Most Popular Rust CLI Tools
+" ===============================
+
+" | Tool        | Replaces | Install Command |
+" |------------|---------|----------------|
+" | ripgrep (`rg`) | grep | :!cargo install ripgrep |
+" | bat        | cat  | :!cargo install bat |
+" | fd         | find | :!cargo install fd-find |
+" | exa        | ls   | :!cargo install exa |
+" | bottom (`btm`) | htop | :!cargo install bottom |
+" | zoxide     | cd   | :!cargo install zoxide |
+" | starship   | Shell prompt | :!cargo install starship |
+" | dust       | du   | :!cargo install du-dust |
+" | tokei      | (Code counter) | :!cargo install tokei |
+" | hyperfine  | (Benchmarking) | :!cargo install hyperfine |
+
+" ===============================
+" 3. Rust CLI Tools – Features & Usage
+" ===============================
+
+" **1. ripgrep (`rg`) – Faster `grep`**
+" - Extremely fast text search.
+" - Ignores `.gitignore` by default.
+" - Supports regex and multi-threading.
+    :!cargo install ripgrep
+    :!rg "pattern" /path/to/search
+
+" **2. bat – A Better `cat`**
+" - Syntax highlighting.
+" - Works as a `less` alternative.
+    :!cargo install bat
+    :!bat file.rs
+
+" **3. fd – A Faster `find`**
+" - Easier syntax, ignores `.gitignore`.
+" - Supports regex and parallel searching.
+    :!cargo install fd-find
+    :!fd "pattern" /path/to/search
+
+" **4. exa – A Better `ls`**
+" - Shows icons, Git info, and colors.
+" - Human-readable file sizes.
+    :!cargo install exa
+    :!exa -la
+
+" **5. bottom (`btm`) – A Modern `htop`**
+" - Clean UI with CPU/RAM monitoring.
+" - More interactive than `htop`.
+    :!cargo install bottom
+    :!btm
+
+" **6. zoxide – Smarter `cd`**
+" - Learns frequently visited directories.
+" - Uses fuzzy search for fast navigation.
+    :!cargo install zoxide
+    :!zoxide init bash | tee -a ~/.bashrc
+    :!z dir_name
+
+" **7. starship – A Customizable Shell Prompt**
+" - Works with `bash`, `zsh`, `fish`.
+" - Shows git status, programming language versions.
+    :!cargo install starship
+    :!starship init bash | tee -a ~/.bashrc
+
+" **8. dust – A More Readable `du`**
+" - Displays disk usage in a clear format.
+    :!cargo install du-dust
+    :!dust /
+
+" **9. tokei – Count Lines of Code**
+" - Shows code statistics across multiple languages.
+    :!cargo install tokei
+    :!tokei src/
+
+" **10. hyperfine – Benchmark Command Execution**
+" - Compares execution speed of commands.
+    :!cargo install hyperfine
+    :!hyperfine "ls -la"
+
+" ===============================
+" 4. Checking & Updating Installed Cargo CLI Tools
+" ===============================
+
+" **List Installed Tools**
+    :!cargo install --list
+
+" **Install Cargo Update Manager**
+    :!cargo install cargo-update
+
+" **Update All Installed CLI Tools**
+    :!cargo install-update -a
+
+" **Update a Specific Tool**
+    :!cargo install --force bat
+
+" ===============================
+" 5. Alternative Ways to Install Rust CLI Tools
+" ===============================
+
+" - Some Rust CLI tools are available via package managers:
+
+" **Debian/Ubuntu**
+    :!sudo apt install ripgrep bat fd-find exa zoxide
+
+" **Fedora**
+    :!sudo dnf install ripgrep bat fd-find exa zoxide
+
+" **macOS (Homebrew)**
+    :!brew install ripgrep bat fd exa zoxide
+
+" ===============================
+" 6. Final Takeaways
+" ===============================
+" - Rust CLI tools are **fast, efficient, and often better** than traditional Unix tools.
+" - They can be installed via **Cargo (`cargo install`) or system package managers**.
+" - Use `cargo install-update -a` to **keep them up to date**.
+" - Ensure `~/.cargo/bin` is in your `PATH`:
+    :!echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+    :!source ~/.bashrc
+

@@ -1,0 +1,81 @@
+" ============================================================
+" Cargo – Rust’s Package Manager & Build System
+" ============================================================
+
+" ===============================
+" 1. What is Cargo?
+" ===============================
+" - Cargo is Rust’s **package manager and build system**.
+" - It handles **compilation, dependencies, testing, formatting, and publishing**.
+" - Similar to:
+"   - `pip` (Python) + `virtualenv`
+"   - `npm` (JavaScript)
+"   - `make` + `cmake` (C++)
+
+" ===============================
+" 2. Installing Cargo
+" ===============================
+" - Cargo is included with Rust. To check if it’s installed:
+    :!cargo --version
+
+" - If missing, install Rust (which includes Cargo):
+    :!curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+" ===============================
+" 3. Basic Cargo Commands
+" ===============================
+
+" **Create a New Rust Project**
+    :!cargo new my_project
+    :!cd my_project
+
+" **Project Structure**
+"   my_project/
+"   ├── src/
+"   │   ├── main.rs      " Main Rust file
+"   ├── Cargo.toml       " Project metadata & dependencies
+"   ├── Cargo.lock       " Auto-generated dependency lockfile
+"   ├── target/          " Compiled files
+
+" **Build & Run a Rust Project**
+    :!cargo build        " Compile project (debug mode)
+    :!cargo run          " Compile & execute
+    :!cargo build --release  " Compile with optimizations
+
+" ===============================
+" 4. Managing Dependencies
+" ===============================
+
+" **Add a Dependency**
+    :!cargo add serde
+
+" **Check and Download Dependencies**
+    :!cargo build
+
+" **Cargo.toml (Example)**
+```toml
+[dependencies]
+serde = "1.0"
+" Update Dependencies :!cargo update
+
+===============================
+
+" Installing a CLI Tool " - Cargo can install system-wide CLI tools. :!cargo install ripgrep
+
+" Where Cargo installs tools " - Binaries are placed in ~/.cargo/bin/ " - Ensure it’s in your PATH: :!echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc :!source ~/.bashrc
+
+" =============================== " 8. Checking & Updating Cargo CLI Tools " ===============================
+
+" List Installed Cargo CLI Tools :!cargo install --list
+
+" Install Cargo Update Manager (first time) :!cargo install cargo-update
+
+" Update All Installed CLI Tools :!cargo install-update -a
+
+" Update a Specific Tool (e.g., bat) :!cargo install --force bat
+
+" =============================== " 9. Publishing a Rust Package " ===============================
+
+" Login to crates.io (one-time setup) :!cargo login <API_TOKEN>
+
+" Publish a Rust Crate :!cargo ptublish
