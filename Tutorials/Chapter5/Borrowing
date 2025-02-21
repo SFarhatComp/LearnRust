@@ -1,0 +1,10 @@
+# References and Borrowing in Rust
+
+## References
+- A reference is like a pointer in other languages, but with additional safety guarantees.
+- References allow you to refer to some value without taking ownership of it.
+- Syntax: `&T` for an immutable reference and `&mut T` for a mutable reference.
+
+### Example:
+
+
